@@ -1,0 +1,29 @@
+.tienda {
+  --acento: #8b5cff;
+  --acento-rgb: 139, 92, 255;
+  --fondo: #050507;
+}
+
+.tema-pulso {
+  --acento: #c6ff25;
+  --acento-rgb: 198, 255, 37;
+  --fondo: #070907;
+}
+
+.tema-atelier {
+  --acento: #e8d7b5;
+  --acento-rgb: 232, 215, 181;
+  --fondo: #0b0907;
+}
+
+.tema-distrito {
+  --acento: #ff5e50;
+  --acento-rgb: 255, 94, 80;
+  --fondo: #05090d;
+}
+
+.tema-atelier .marca-icono {
+  border-radius: 50%;
+}
+
+

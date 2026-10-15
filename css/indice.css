@@ -1,0 +1,171 @@
+.pagina-indice {
+  min-height: 100vh;
+  background: #08080a;
+}
+
+.cabecera {
+  width: min(1440px, calc(100% - 64px));
+  height: 110px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.marca-simbolo {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #444;
+  border-radius: 50%;
+}
+
+.etiqueta-cabecera {
+  color: #8b8890;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.portada-indice {
+  width: min(1440px, calc(100% - 64px));
+  margin: 70px auto 80px;
+}
+
+.rotulo {
+  color: #85818a;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.portada-indice h1 {
+  margin: 28px 0;
+  font: 600 clamp(54px, 9vw, 132px) / 0.92 var(--titulos);
+  letter-spacing: -0.075em;
+}
+
+.portada-indice h1 em {
+  color: #89858f;
+  font-weight: 400;
+}
+
+.bajada-indice {
+  max-width: 540px;
+  margin-left: auto;
+  color: #aaa7af;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.grilla-conceptos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: #1b1b1e;
+}
+
+.tarjeta-concepto {
+  position: relative;
+  min-height: 660px;
+  overflow: hidden;
+  background: #111;
+}
+
+.tarjeta-concepto img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.velo-tarjeta {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 0.9));
+  transition: background 0.5s;
+}
+
+.tarjeta-concepto:hover img {
+  transform: scale(1.035);
+}
+
+.tarjeta-concepto:hover .velo-tarjeta {
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.08) 40%, rgba(0, 0, 0, 0.72));
+}
+
+.numero-concepto {
+  position: absolute;
+  top: 28px;
+  left: 30px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: rgba(12, 12, 15, 0.18);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  backdrop-filter: blur(14px) saturate(150%);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.14), 0 8px 24px rgba(0, 0, 0, 0.12);
+  font-size: 11px;
+}
+
+.datos-concepto {
+  position: absolute;
+  right: 40px;
+  bottom: 36px;
+  left: 40px;
+}
+
+.datos-concepto > span {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.datos-concepto h2 {
+  margin: 10px 0;
+  font: 600 clamp(52px, 7vw, 94px) / 1 var(--titulos);
+  letter-spacing: -0.06em;
+}
+
+.datos-concepto p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 13px;
+}
+
+.icono-enlace {
+  display: inline-grid;
+  place-items: center;
+}
+
+.icono-enlace .icono-svg {
+  width: 22px;
+  height: 22px;
+}
+
+.pie-indice {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 4%;
+  color: #85818a;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}

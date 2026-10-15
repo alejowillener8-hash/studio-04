@@ -1,0 +1,110 @@
+.cabecera-tienda {
+  position: fixed;
+  z-index: 15;
+  top: 20px;
+  left: 50%;
+  width: min(1320px, calc(100% - 48px));
+  height: 70px;
+  padding: 0 18px 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateX(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background: rgba(9, 9, 12, 0.68);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+  transition: transform 0.42s ease, width 0.4s, top 0.4s, background 0.4s, border-radius 0.4s;
+}
+
+.cabecera-tienda.cabecera-oculta {
+  transform: translate(-50%, -130%);
+}
+
+.cabecera-tienda.cabecera-compacta {
+  top: 12px;
+  width: min(760px, calc(100% - 32px));
+  border-radius: 999px;
+  background: rgba(10, 10, 12, 0.9);
+}
+
+.cabecera-compacta .navegacion a:nth-child(2) {
+  display: none;
+}
+
+.marca-tienda {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font: 800 15px / 1 var(--titulos);
+  letter-spacing: 0.13em;
+}
+
+.marca-icono {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--acento);
+  color: #090909;
+  font: 800 14px var(--fuente);
+}
+
+.navegacion {
+  display: flex;
+  gap: 34px;
+  color: #d2d0d5;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navegacion a {
+  transition: color 0.2s;
+}
+
+.navegacion a:hover {
+  color: var(--texto);
+}
+
+.acciones-cabecera {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.boton-icono,
+.bolsa {
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--borde);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+}
+
+.boton-icono {
+  width: 40px;
+}
+
+.bolsa {
+  padding: 0 14px;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.bolsa span {
+  width: 20px;
+  height: 20px;
+  margin-left: 7px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--acento);
+  color: #090909;
+  font-weight: 700;
+}

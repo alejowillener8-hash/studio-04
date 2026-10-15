@@ -1,0 +1,265 @@
+.pagina-producto-unico {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--fondo);
+}
+
+.pagina-producto-unico .aura-uno {
+  position: fixed;
+  top: 10%;
+  right: -180px;
+  width: 650px;
+  height: 650px;
+}
+
+.pagina-producto-unico .aura-dos {
+  position: fixed;
+  top: 40%;
+  left: -160px;
+  width: 420px;
+  height: 420px;
+}
+
+.escaparate-unico {
+  position: relative;
+  min-height: auto;
+  padding: 200px 5vw 150px;
+  flex: none;
+  display: grid;
+  place-items: center;
+}
+
+.tarjeta-compra {
+  width: min(1280px, 100%);
+  min-height: max(620px, calc(100vh - 260px));
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 32px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.025));
+  backdrop-filter: blur(28px);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.45), inset 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.visual-compra {
+  position: relative;
+  min-height: 620px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-right: 1px solid rgba(255, 255, 255, 0.11);
+  background: radial-gradient(circle at 50% 50%, rgba(var(--acento-rgb), 0.16), transparent 53%);
+}
+
+.visual-compra::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.08), transparent 28%, transparent 70%, rgba(255, 255, 255, 0.035));
+  pointer-events: none;
+}
+
+.visual-compra img {
+  position: relative;
+  z-index: 2;
+  width: 96%;
+  max-height: 620px;
+  object-fit: contain;
+  border-radius: 22px;
+  filter: drop-shadow(0 35px 50px rgba(0, 0, 0, 0.55));
+  animation: respirar 6s ease-in-out infinite;
+}
+
+.sello-producto,
+.codigo-producto {
+  position: absolute;
+  z-index: 4;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+
+.sello-producto {
+  top: 28px;
+  left: 30px;
+}
+
+.codigo-producto {
+  right: 30px;
+  bottom: 26px;
+}
+
+.boton-volver-inicio {
+  position: absolute;
+  z-index: 5;
+  top: 18px;
+  right: 24px;
+  padding: 10px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(8, 8, 10, 0.38);
+  backdrop-filter: blur(14px);
+  font-size: 12px;
+  font-weight: 600;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.boton-volver-inicio:hover {
+  transform: translateY(-2px);
+  border-color: rgba(var(--acento-rgb), 0.65);
+  background: rgba(var(--acento-rgb), 0.16);
+}
+
+.anillo-producto {
+  position: absolute;
+  width: 52%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(var(--acento-rgb), 0.7);
+  border-radius: 50%;
+  box-shadow: 0 0 75px rgba(var(--acento-rgb), 0.2);
+}
+
+.lineas-velocidad {
+  position: absolute;
+  width: 75%;
+  height: 45%;
+  transform: skewX(-20deg);
+  border-top: 1px solid rgba(var(--acento-rgb), 0.65);
+  border-bottom: 1px solid rgba(var(--acento-rgb), 0.35);
+  box-shadow: 0 0 60px rgba(var(--acento-rgb), 0.12);
+}
+
+.grafiti-producto {
+  position: absolute;
+  transform: rotate(-8deg);
+  color: rgba(var(--acento-rgb), 0.08);
+  font: 800 34vw / 0.8 var(--titulos);
+}
+
+.informacion-compra {
+  padding: 46px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(4, 4, 6, 0.34);
+  backdrop-filter: blur(22px);
+}
+
+.sobrelinea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #aaa;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.sobrelinea span {
+  width: 28px;
+  height: 1px;
+  display: block;
+  background: var(--acento);
+}
+
+.informacion-compra h1 {
+  margin: 24px 0;
+  font: 700 clamp(50px, 5.5vw, 82px) / 0.9 var(--titulos);
+  letter-spacing: -0.06em;
+}
+
+.informacion-compra h1 em {
+  color: var(--acento);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.descripcion-compra {
+  margin: 0 0 27px;
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.linea-precio {
+  padding: 20px 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-top: 1px solid var(--borde);
+  border-bottom: 1px solid var(--borde);
+}
+
+.linea-precio strong {
+  font: 600 26px var(--titulos);
+}
+
+.linea-precio span {
+  color: #888;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.selector-talles {
+  margin: 25px 0;
+}
+
+.selector-talles p {
+  color: #aaa;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.selector-talles > div {
+  display: flex;
+  gap: 7px;
+}
+
+.selector-talles button {
+  width: 44px;
+  height: 42px;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #aaa;
+  cursor: pointer;
+}
+
+.selector-talles button:hover,
+.selector-talles button.activo {
+  border-color: var(--acento);
+  background: var(--acento);
+  color: #090909;
+  font-weight: 700;
+}
+
+.boton-comprar {
+  width: 100%;
+  padding: 18px 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  border-radius: 12px;
+  background: var(--acento);
+  box-shadow: 0 12px 35px rgba(var(--acento-rgb), 0.16);
+  color: #080808;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nota-envio {
+  margin-top: 15px;
+  color: #777;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
